@@ -1,0 +1,25 @@
+@import './item.css';
+
+nav {
+    background-color: #1F4068;
+}
+
+body{
+    background-color: #162447;
+}
+
+.page-footer{
+    background-color: #162447;
+}
+
+.page-footer > .footer-copyright{
+    background-color: #1F4068;
+}
+
+.sidenav{
+    background-color: #1F4068;
+}
+
+.sidenav li a{
+    color: whitesmoke;
+}

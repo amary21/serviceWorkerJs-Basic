@@ -1,0 +1,39 @@
+.item-list {
+    margin-top: 32px;
+    width: 100%;
+    padding: 16px;
+}
+
+.movie {
+    margin-bottom: 18px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie .responsive-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie-info {
+    padding: 24px;
+}
+
+.movie-info > h2 {
+    font-weight: lighter;
+    color: white;
+    font-style: oblique;
+}
+
+.movie-info > p {
+    margin-top: 10px;
+    overflow: hidden;
+    color: whitesmoke;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+}
