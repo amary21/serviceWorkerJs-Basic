@@ -1,5 +1,6 @@
 import home from '../scripts/views/view-home.js';
 import itemView from './views/view-item.js';
+import service from './service.js';
 
 const main = () => {
     const elems = document.querySelectorAll(".sidenav");
@@ -62,7 +63,9 @@ const main = () => {
         
         xhttp.open("GET", "pages/" + page + ".html", true)
         xhttp.send();
-    }   
+    }
+    
+    service();
 }
 
 export default main;
