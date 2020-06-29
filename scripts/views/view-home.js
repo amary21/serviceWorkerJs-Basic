@@ -11,7 +11,7 @@ const home = ()=>{
             const imageElement = document.createElement("div");
             imageElement.setAttribute("class", "parallax-container");
             imageElement.innerHTML = `<div class="parallax">
-                <img src="${image}">
+                <img src="${image}" alt="${image}">
                 </div>`;
 
             const valueElement = document.createElement("div");

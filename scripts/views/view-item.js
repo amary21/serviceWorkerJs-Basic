@@ -22,7 +22,7 @@ const itemView = () =>{
 
             const itemElement = document.createElement("div");
             itemElement.setAttribute("class", "movie");
-            itemElement.innerHTML = `<img class="responsive-img" src="${image}">
+            itemElement.innerHTML = `<img class="responsive-img" src="${image}" alt="${image - name}">
                 <div class="movie-info">
                     <h2>${name}</h2>
                     <p>${description}</p>
