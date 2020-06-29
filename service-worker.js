@@ -1,5 +1,5 @@
 const CACHE_NAME = "movie-v1";
-var urlsToCache = [
+const urlsToCache = [
     "/",
     "/manifest.json",
     "/nav.html",
@@ -50,7 +50,7 @@ var urlsToCache = [
     "/images/icons/icon-512x512.png",
 ];
 
-self.addEventListener("install", function(event){
+self.addEventListener("install", event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(function(cache){
             return cache.addAll(urlsToCache)
@@ -58,11 +58,11 @@ self.addEventListener("install", function(event){
     );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("fetch", event => {
     event.respondWith(
       caches
         .match(event.request, { cacheName: CACHE_NAME })
-        .then(function(response) {
+        .then(response => {
           if (response) {
             console.log("ServiceWorker: Gunakan aset dari cache: ", response.url);
             return response;
@@ -77,11 +77,11 @@ self.addEventListener("fetch", function(event) {
     );
 });
 
-self.addEventListener("activate", function(event) {
+self.addEventListener("activate", event => {
     event.waitUntil(
-      caches.keys().then(function(cacheNames) {
+      caches.keys().then(cacheNames => {
         return Promise.all(
-          cacheNames.map(function(cacheName) {
+          cacheNames.map(cacheName => {
             if (cacheName != CACHE_NAME) {
               console.log("ServiceWorker: cache " + cacheName + " dihapus");
               return caches.delete(cacheName);

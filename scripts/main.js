@@ -8,10 +8,10 @@ const main = () => {
     loadNav();
 
     function loadNav(){
-        var xhttp = new XMLHttpRequest();
+        const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if(this.readyState == 4){
-                if(this.status != 200) return;
+                if(this.status !== 200) return;
 
                 document.querySelectorAll(".topnav, .sidenav").forEach(elm => {
                     elm.innerHTML = xhttp.responseText;
@@ -41,11 +41,11 @@ const main = () => {
     loadPage(page);
 
     function loadPage(page){
-        var xhttp = new XMLHttpRequest();
+        const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(){
             if(this.readyState == 4){
-                var content = document.querySelector("#body-content");
-                if(this.status == 200){
+                const content = document.querySelector("#body-content");
+                if(this.status === 200){
                     content.innerHTML = xhttp.responseText;
                     if (page == "home"){
                         home();
